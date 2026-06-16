@@ -15,6 +15,10 @@ export class Formulaire {
 
   signalementForm!: FormGroup;
 
+  // retour(): void{
+  //   this.router.navigateByUrl("");
+  // }
+
   ngOnInit(): void {
       this.signalementForm = this.formBuilder.group({
         nom: ['', [
@@ -23,6 +27,7 @@ export class Formulaire {
           Validators.maxLength(50),
           Validators.pattern(/^[a-zA-ZÀ-ÿ\s'-]+$/)
         ]],
+
         titre: ['', [
           Validators.required,
           Validators.minLength(5),
@@ -37,7 +42,9 @@ export class Formulaire {
         ]],
         email: ['', [Validators.required, Validators.email]],
         categorie: ['', [Validators.required]],
+        
         image: [''],
+
         description: ['', [
           Validators.required, 
           Validators.minLength(20),
