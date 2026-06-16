@@ -8,5 +8,5 @@ import { Formulaire } from './components/formulaire/formulaire';
   styleUrl: './app.css'
 })
 export class App {
-  
+
 }
